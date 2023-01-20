@@ -21,4 +21,6 @@
         <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find loam_livox)/rviz_cfg/rosbag_b.rviz" />
     </group>
 
+    <node pkg="rosbag" type="play" name="player" output="screen" args="/$(env GDRIVE_BAGFILE_NAME)" launch-prefix="bash -c 'sleep 5; $0 $@' "/>
+
 </launch>
